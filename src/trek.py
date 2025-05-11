@@ -9,9 +9,9 @@ unichar = {
     }
 
 # Returns current folder path
-def path():
+def path(path):
     #current_dir = Path.cwd()
-    return "/home/yashwanth/Programs/C"
+    return path
             
 # Use item.name for item's name without full path
 def explore(dir, prefix=""):

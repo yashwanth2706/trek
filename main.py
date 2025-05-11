@@ -1,8 +1,18 @@
+import sys, argparse
 from src.trek import explore, path
 
 # Main function
-def main():
-    explore(path())
+def main(args):
+    
+    parser = argparse.ArgumentParser(description="Command line tool inspired by tree to visualize directry structure")
+    parser.add_argument("path", metavar="P", type=str, nargs="+", help="path to visualize directry")
+    args = parser.parse_args()
+    
+    if args.path:
+        target = args.path
+        target_directry = target[1]
+        explore(path(target_directry))
 
 if __name__ == "__main__":
-    main()
+    main(sys.argv[1:])
+    

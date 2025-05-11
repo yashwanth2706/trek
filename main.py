@@ -5,7 +5,7 @@ from src.trek import explore, path
 def main(args):
     
     parser = argparse.ArgumentParser(description="Command line tool inspired by tree to visualize directry structure")
-    parser.add_argument("path", metavar="P", type=str, nargs="+", help="path to visualize directry")
+    parser.add_argument("path", metavar="p", type=str, nargs="+", help="path to visualize directry")
     args = parser.parse_args()
     
     if args.path:

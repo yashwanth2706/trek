@@ -1,5 +1,5 @@
 import sys, argparse
-from src.trek import explore, path
+from src.trek import explore
 
 # Main function
 def main(args):
@@ -11,7 +11,7 @@ def main(args):
     if args.path:
         target = args.path
         target_directry = target[1]
-        explore(path(target_directry))
+        explore(target_directry)
 
 if __name__ == "__main__":
     main(sys.argv[1:])

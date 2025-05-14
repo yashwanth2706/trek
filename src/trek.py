@@ -9,7 +9,7 @@ unichar = {
     }
             
 # Use item.name for item's name without full path
-def explore(dir, prefix="", files = 0, directories = 0):
+def explore(dir, prefix="", files = -1, directories = -1):
     dir_path = Path(dir)
     entries = sorted(list(dir_path.iterdir()))
     
@@ -23,4 +23,4 @@ def explore(dir, prefix="", files = 0, directories = 0):
             extension = unichar["space"] if is_last else unichar["vertical_line"]
             explore(item, prefix+extension)
     
-    return {"directories":directories-1, "files":files-1}
+    return {"directories":directories, "files":files}

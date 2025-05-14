@@ -11,7 +11,8 @@ def main(args):
     if args.path:
         target = args.path
         target_directry = target[1]
-        explore(target_directry)
+        total_items = explore(target_directry)
+        print(f"{total_items['directories']} directories, {total_items['files']} files ")
 
 if __name__ == "__main__":
     main(sys.argv[1:])
